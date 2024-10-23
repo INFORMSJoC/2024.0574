@@ -75,10 +75,7 @@ make
 
 Be sure to make clean before building a different version of the code.
 
-## Results
-
-
 ## Scripts
+The script run\_instances.sh can be used to run the leblanc\_solver over a directory of instances.
 
 Figures can be generated from the scripts/plot_logs.py
-
