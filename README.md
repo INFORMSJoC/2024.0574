@@ -39,68 +39,38 @@ Below is the BibTex for citing this snapshot of the repository.
 
 ## Description
 
-The goal of this software is to demonstrate the effect of cache optimization.
+The software in this repository is developed to solve the First Responder Network Design Problem (FRNDP) using Graver Augmentation Multi-seeded Algorithm (GAMA) and Branch-and-Bound.
 
 ## Building
+The code for Bi-level GAMA (GAGA) is in the src directory. This is divided into 3 subdirectories: 
+1. code_paths_generation: Path generation for random-graph instances and case-study instances
+2. code_random: Graver walk on random-graph instances
+3. code_Tgraph: Graver walk on case-study instances
 
-In Linux, to build the version that multiplies all elements of a vector by a
-constant (used to obtain the results in [Figure 1](results/mult-test.png) in the
-paper), stepping K elements at a time, execute the following commands.
+To solve the FRNDP using GAGA, we generate paths and carry out Graver augmentation. The steps are discussed below.
 
-```
-make mult
-```
+For random graph instances:
+a) Path generation: The script to generate paths is code_paths_generation/main_gen_paths_random_instances.py
+   i) Example Usage:  python main_gen_paths_random_instances.py --nodes_file_cinput='data/instances/random_instances/nodes_30_0.75_0.csv' --edges_file_cinput='data/instances/random_instances/edges_30_0.75_0.csv' --path_save_data_cinput='data/Q-HOPE_output/random_instances/graph_30_0.75_0' --nsamples_cinput=10000 --feas_sols_cinput=True --graver_basis_cinput=True
+b) Graver Augmentation: The code is located in code_random. 
+   i)  Compilation: g++ -O3 func_cost.cpp func_SR.cpp selfish_routing_leblanc.cpp func_leblanc.cpp main_FR_random_instances.cpp -o ./main_FR_random_instances
+   ii) Run: ./main_FR_random_instances --outputdirectory --nodesfile --edgesfile
+   iii) Example: ./main_FR_random_instances data/Q-HOPE_output/random_instances/graph_10000SA_30_0.75_0 data/instances/random_instances_reorder/nodes_30_0.75_0.csv data/instances/random_instances_reorder/edges_30_0.75_0.csv
 
-Alternatively, to build the version that sums the elements of a vector (used
-to obtain the results [Figure 2](results/sum-test.png) in the paper), stepping K
-elements at a time, do the following.
 
-```
-make clean
-make sum
-```
-
-Be sure to make clean before building a different version of the code.
+For case study instances:
+a) Path generation: The script to generate paths is code_paths_generation/main_gen_paths_Tgraph_instances.py
+   i) Example Usage:  python main_gen_paths_Tgraph_instances.py --nodes_file_cinput='data/instances/Tgraph_noNorm/nodes_1.csv' --edges_file_cinput='data/instances/Tgraph_noNorm/edges_1.csv' --path_save_data_cinput='data/Q-HOPE_output/Tgraph/graph_10000SA1__1' --feas_sols_cinput=True --graver_basis_cinput=True
+b) Graver Augmentation: The code is located in code_random.
+   i)  Compilation: g++ -O3 func_cost.cpp func_SR.cpp selfish_routing_leblanc.cpp func_leblanc.cpp main_FR_Tgraph_instances.cpp -o ./main_FR_Tgraph_instances
+   ii) Run: ./main_FR_random_instances --outputdirectory --nodesfile --edgesfile --specify_toerance (0: No Tolerance, 1: Tolerance)
+   iii) Example: ./main_FR_Tgraph_instances data/Q-HOPE_output/Tgraph/graph_10000SA1__1 data/instances/Tgraph_noNorm/nodes_1.csv data/instances/Tgraph_noNorm/edges_1.csv 0 (no tolerance threshold)
+                 ./main_FR_Tgraph_instances data/Q-HOPE_output/Tgraph/graph_10000SA1__1 data/instances/Tgraph_noNorm/nodes_1.csv data/instances/Tgraph_noNorm/edges_1.csv 1 (with tolerance threshold)
 
 ## Results
 
-Figure 1 in the paper shows the results of the multiplication test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
 
-![Figure 1](results/mult-test.png)
+## Scripts
 
-Figure 2 in the paper shows the results of the sum test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
+Figures can be generated from the scripts/plot_logs.py
 
-![Figure 1](results/sum-test.png)
-
-## Replicating
-
-To replicate the results in [Figure 1](results/mult-test), do either
-
-```
-make mult-test
-```
-or
-```
-python test.py mult
-```
-To replicate the results in [Figure 2](results/sum-test), do either
-
-```
-make sum-test
-```
-or
-```
-python test.py sum
-```
-
-## Ongoing Development
-
-This code is being developed on an on-going basis at the author's
-[Github site](https://github.com/tkralphs/JoCTemplate).
-
-## Support
-
-For support in using this software, submit an
-[issue](https://github.com/tkralphs/JoCTemplate/issues/new).
