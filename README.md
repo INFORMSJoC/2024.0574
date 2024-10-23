@@ -53,36 +53,48 @@ For random graph instances:
 
 a) Path generation: The script to generate paths is code_paths_generation/main_gen_paths_random_instances.py
 
-   i) Example Usage:  python main_gen_paths_random_instances.py --nodes_file_cinput='data/instances/random_instances/nodes_30_0.75_0.csv' --edges_file_cinput='data/instances/random_instances/edges_30_0.75_0.csv' --path_save_data_cinput='data/Q-HOPE_output/random_instances/graph_30_0.75_0' --nsamples_cinput=10000 --feas_sols_cinput=True --graver_basis_cinput=True
+   i) Example Usage:  
+
+          python main_gen_paths_random_instances.py --nodes_file_cinput='data/instances/random_instances/nodes_30_0.75_0.csv' --edges_file_cinput='data/instances/random_instances/edges_30_0.75_0.csv' --path_save_data_cinput='data/Q-HOPE_output/random_instances/graph_30_0.75_0' --nsamples_cinput=10000 --feas_sols_cinput=True --graver_basis_cinput=True
 
 b) Graver Augmentation: The code is located in code_random. 
 
-   i)  Compilation: g++ -O3 func_cost.cpp func_SR.cpp selfish_routing_leblanc.cpp func_leblanc.cpp main_FR_random_instances.cpp -o ./main_FR_random_instances
+   i)  Compilation: 
 
-   ii) Run: ./main_FR_random_instances --outputdirectory --nodesfile --edgesfile
+          g++ -O3 func_cost.cpp func_SR.cpp selfish_routing_leblanc.cpp func_leblanc.cpp main_FR_random_instances.cpp -o ./main_FR_random_instances
+
+   ii) Run: 
+
+          ./main_FR_random_instances --outputdirectory --nodesfile --edgesfile
 
    iii) Example: 
 
-                ./main_FR_random_instances data/Q-HOPE_output/random_instances/graph_10000SA_30_0.75_0 data/instances/random_instances_reorder/nodes_30_0.75_0.csv data/instances/random_instances_reorder/edges_30_0.75_0.csv
+          ./main_FR_random_instances data/Q-HOPE_output/random_instances/graph_10000SA_30_0.75_0 data/instances/random_instances_reorder/nodes_30_0.75_0.csv data/instances/random_instances_reorder/edges_30_0.75_0.csv
 
 
 For case study instances:
 
 a) Path generation: The script to generate paths is code_paths_generation/main_gen_paths_Tgraph_instances.py
 
-   i) Example Usage:  python main_gen_paths_Tgraph_instances.py --nodes_file_cinput='data/instances/Tgraph_noNorm/nodes_1.csv' --edges_file_cinput='data/instances/Tgraph_noNorm/edges_1.csv' --path_save_data_cinput='data/Q-HOPE_output/Tgraph/graph_10000SA1__1' --feas_sols_cinput=True --graver_basis_cinput=True
+   i) Example Usage:  
+
+          python main_gen_paths_Tgraph_instances.py --nodes_file_cinput='data/instances/Tgraph_noNorm/nodes_1.csv' --edges_file_cinput='data/instances/Tgraph_noNorm/edges_1.csv' --path_save_data_cinput='data/Q-HOPE_output/Tgraph/graph_10000SA1__1' --feas_sols_cinput=True --graver_basis_cinput=True
 
 b) Graver Augmentation: The code is located in code_random.
 
-   i)  Compilation: g++ -O3 func_cost.cpp func_SR.cpp selfish_routing_leblanc.cpp func_leblanc.cpp main_FR_Tgraph_instances.cpp -o ./main_FR_Tgraph_instances
+   i)  Compilation: 
 
-   ii) Run: ./main_FR_random_instances --outputdirectory --nodesfile --edgesfile --specify_toerance (0: No Tolerance, 1: Tolerance)
+          g++ -O3 func_cost.cpp func_SR.cpp selfish_routing_leblanc.cpp func_leblanc.cpp main_FR_Tgraph_instances.cpp -o ./main_FR_Tgraph_instances
+
+   ii) Run: 
+
+          ./main_FR_random_instances --outputdirectory --nodesfile --edgesfile --specify_toerance (0: No Tolerance, 1: Tolerance)
 
    iii) Example: 
 
-                 ./main_FR_Tgraph_instances data/Q-HOPE_output/Tgraph/graph_10000SA1__1 data/instances/Tgraph_noNorm/nodes_1.csv data/instances/Tgraph_noNorm/edges_1.csv 0 (no tolerance threshold)
+          ./main_FR_Tgraph_instances data/Q-HOPE_output/Tgraph/graph_10000SA1__1 data/instances/Tgraph_noNorm/nodes_1.csv data/instances/Tgraph_noNorm/edges_1.csv 0 (no tolerance threshold)
 
-                 ./main_FR_Tgraph_instances data/Q-HOPE_output/Tgraph/graph_10000SA1__1 data/instances/Tgraph_noNorm/nodes_1.csv data/instances/Tgraph_noNorm/edges_1.csv 1 (with tolerance threshold)
+          ./main_FR_Tgraph_instances data/Q-HOPE_output/Tgraph/graph_10000SA1__1 data/instances/Tgraph_noNorm/nodes_1.csv data/instances/Tgraph_noNorm/edges_1.csv 1 (with tolerance threshold)
 
 Branch-and-bound: In Linux, use the Makefile to compile the binary leblanc\_solver
 
