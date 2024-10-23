@@ -61,7 +61,9 @@ b) Graver Augmentation: The code is located in code_random.
 
    ii) Run: ./main_FR_random_instances --outputdirectory --nodesfile --edgesfile
 
-   iii) Example: ./main_FR_random_instances data/Q-HOPE_output/random_instances/graph_10000SA_30_0.75_0 data/instances/random_instances_reorder/nodes_30_0.75_0.csv data/instances/random_instances_reorder/edges_30_0.75_0.csv
+   iii) Example: 
+
+                ./main_FR_random_instances data/Q-HOPE_output/random_instances/graph_10000SA_30_0.75_0 data/instances/random_instances_reorder/nodes_30_0.75_0.csv data/instances/random_instances_reorder/edges_30_0.75_0.csv
 
 
 For case study instances:
@@ -76,7 +78,9 @@ b) Graver Augmentation: The code is located in code_random.
 
    ii) Run: ./main_FR_random_instances --outputdirectory --nodesfile --edgesfile --specify_toerance (0: No Tolerance, 1: Tolerance)
 
-   iii) Example: ./main_FR_Tgraph_instances data/Q-HOPE_output/Tgraph/graph_10000SA1__1 data/instances/Tgraph_noNorm/nodes_1.csv data/instances/Tgraph_noNorm/edges_1.csv 0 (no tolerance threshold)
+   iii) Example: 
+
+                 ./main_FR_Tgraph_instances data/Q-HOPE_output/Tgraph/graph_10000SA1__1 data/instances/Tgraph_noNorm/nodes_1.csv data/instances/Tgraph_noNorm/edges_1.csv 0 (no tolerance threshold)
 
                  ./main_FR_Tgraph_instances data/Q-HOPE_output/Tgraph/graph_10000SA1__1 data/instances/Tgraph_noNorm/nodes_1.csv data/instances/Tgraph_noNorm/edges_1.csv 1 (with tolerance threshold)
 
@@ -91,4 +95,6 @@ Be sure to make clean before building a different version of the code.
 ## Scripts
 The script run\_instances.sh can be used to run the leblanc\_solver over a directory of instances.
 
-Figures can be generated from the scripts/plot_logs.py
+Figures can be generated from the scripts/figs_Tgraph.py. Also outputs the associated Tables.
+
+Tables for the 10, 20 and 30 node random instances can be generated using the scripts/table_rand_instances10node.py and scripts/table_rand_instances.py
