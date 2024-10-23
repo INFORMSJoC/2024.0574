@@ -6,7 +6,7 @@ Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](
 
 The software and data in this repository are a snapshot of the software and data
 that were used in the research reported on in the paper 
-[This is a Template](https://doi.org/10.1287/ijoc.2019.0000) by T. Ralphs. 
+[here](https://doi.org/10.1287/ijoc.2024.0574) by Anthony Karahalios
 The snapshot is based on 
 [this SHA](https://github.com/tkralphs/JoCTemplate/commit/f7f30c63adbcb0811e5a133e1def696b74f3ba15) 
 in the development repository. 
@@ -19,21 +19,21 @@ get a more recent version or would like support**
 
 To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs.
 
-https://doi.org/10.1287/ijoc.2019.0000
+https://doi.org/10.1287/ijoc.2024.0574
 
-https://doi.org/10.1287/ijoc.2019.0000.cd
+https://doi.org/10.1287/ijoc.2024.0574.cd
 
 Below is the BibTex for citing this snapshot of the repository.
 
 ```
 @misc{CacheTest,
-  author =        {T. Ralphs},
+  author =        {Karahalios, Anthony and Tenneti, Ananth},
   publisher =     {INFORMS Journal on Computing},
   title =         {{CacheTest}},
-  year =          {2020},
-  doi =           {10.1287/ijoc.2019.0000.cd},
-  url =           {https://github.com/INFORMSJoC/2019.0000},
-  note =          {Available for download at https://github.com/INFORMSJoC/2019.0000},
+  year =          {2024},
+  doi =           {10.1287/ijoc.2024.0574.cd},
+  url =           {https://github.com/INFORMSJoC/2024.0574},
+  note =          {Available for download at https://github.com/INFORMSJoC/2024.0574},
 }  
 ```
 
@@ -66,6 +66,14 @@ b) Graver Augmentation: The code is located in code_random.
    ii) Run: ./main_FR_random_instances --outputdirectory --nodesfile --edgesfile --specify_toerance (0: No Tolerance, 1: Tolerance)
    iii) Example: ./main_FR_Tgraph_instances data/Q-HOPE_output/Tgraph/graph_10000SA1__1 data/instances/Tgraph_noNorm/nodes_1.csv data/instances/Tgraph_noNorm/edges_1.csv 0 (no tolerance threshold)
                  ./main_FR_Tgraph_instances data/Q-HOPE_output/Tgraph/graph_10000SA1__1 data/instances/Tgraph_noNorm/nodes_1.csv data/instances/Tgraph_noNorm/edges_1.csv 1 (with tolerance threshold)
+
+Branch-and-bound: In Linux, use the Makefile to compile the binary leblanc\_solver
+
+```
+make
+```
+
+Be sure to make clean before building a different version of the code.
 
 ## Results
 
