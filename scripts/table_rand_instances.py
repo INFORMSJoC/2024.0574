@@ -1,18 +1,18 @@
 import numpy as np
 
-dirname_from = '/home/vat/julia_codes/file_fr_documented/data/'
+dirname_from = './data/'
 graph_dir_name0 = 'graph_'
-graph_dir_name1 = 'graph_DW_'
-graph_dir_name2 = 'graph_10000SA_'
-graph_size = '10'
-graph_den = '0.75'
+graph_dir_name1 = 'graph_10000SA_'
+graph_dir_name2 = 'graph_yens_k_shortest_'
+graph_size = '20'
+graph_den = '0.5'
 
 print("Total time: SA+graver")
 print(" ")
-for i in range(31):
+for i in range(12):
     try:
        a1_0 = np.fromfile(dirname_from + '/Q-HOPE_output/random_instances/' + graph_dir_name0 + graph_size + '_' + graph_den + '_' + str(i) + '/sols_save_non0_optimal1/e21sr_sol_srallFR_op1000.npy')
-       b1_0 = np.fromfile(dirname_from + './Q-HOPE_output/random_instances/' + graph_dir_name0 + graph_size + '_' + graph_den + '_' + str(i) + '/sols_save_non0_optimal1/e21time_sol_srallFR_op1000.npy')
+       b1_0 = np.fromfile(dirname_from + '/Q-HOPE_output/random_instances/' + graph_dir_name0 + graph_size + '_' + graph_den + '_' + str(i) + '/sols_save_non0_optimal1/e21time_sol_srallFR_op1000.npy')
        b1_0 = np.fromfile(dirname_from + '/Q-HOPE_output/random_instances/' + graph_dir_name0 + graph_size + '_' + graph_den + '_' + str(i) + '/sols_save_non0_optimal1/e21time_sol_srallFR_op1000.npy')
        a1_0l = np.fromfile(dirname_from + '/Q-HOPE_output/random_instances/' + graph_dir_name0 + graph_size + '_' + graph_den + '_' + str(i) + '/sols_save_non0_optimal1/e21sr_sol_nogama_op1000.npy')
        b1_0l = np.fromfile(dirname_from + '/Q-HOPE_output/random_instances/' + graph_dir_name0 + graph_size + '_' + graph_den + '_' + str(i) + '/sols_save_non0_optimal1/e21sr_time_nogama_op1000.npy')
