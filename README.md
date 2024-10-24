@@ -1,19 +1,12 @@
 [![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
-# CacheTest
+# A Quantum Inspired Bi-level Optimization Algorithm for the First Responder Network Design Problem
 This archive is distributed in association with the [INFORMS Journal on
 Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
 
 The software and data in this repository are a snapshot of the software and data
 that were used in the research reported on in the paper 
-[here](https://doi.org/10.1287/ijoc.2024.0574) by Anthony Karahalios
-The snapshot is based on 
-[this SHA](https://github.com/tkralphs/JoCTemplate/commit/f7f30c63adbcb0811e5a133e1def696b74f3ba15) 
-in the development repository. 
-
-**Important: This code is being developed on an on-going basis at 
-https://github.com/tkralphs/JoCTemplate. Please go there if you would like to
-get a more recent version or would like support**
+[A Quantum Inspired Bi-level Optimization Algorithm for the First Responder Network Design Problem](https://doi.org/10.1287/ijoc.2024.0574) by Anthony Karahalios, Sridhar Tayur, Ananth Tenneti, Amirezza Pashapour, Sibel F. Salman, and Baris Yildiz.
 
 ## Cite
 
@@ -26,10 +19,10 @@ https://doi.org/10.1287/ijoc.2024.0574.cd
 Below is the BibTex for citing this snapshot of the repository.
 
 ```
-@misc{CacheTest,
+@misc{Karahalios2024,
   author =        {Karahalios, Anthony and Tayur, Sridhar and Tenneti, Ananth and Pashapour, Amirezza and Salman, F. Sibel and Yildiz, Baris},
   publisher =     {INFORMS Journal on Computing},
-  title =         {{CacheTest}},
+  title =         {{A Quantum Inspired Bi-level Optimization Algorithm for the First Responder Network Design Problem}},
   year =          {2024},
   doi =           {10.1287/ijoc.2024.0574.cd},
   url =           {https://github.com/INFORMSJoC/2024.0574},
